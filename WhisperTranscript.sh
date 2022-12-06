@@ -9,4 +9,4 @@ conda activate /scratch/xao1/whisper
 
 mkdir $DIR
 
-whisper --language English --model large --ouput_dir $DIR $VIDFILE
+whisper --language English --model large --output_dir $DIR $VIDFILE

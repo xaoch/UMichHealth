@@ -11,6 +11,8 @@ sbatch PostureExtraction.s /scratch/xao1/UMichHealth/HCAJ18/HCAJ18_2.mp4 /scratc
 SINGULARITY_IMAGE=/scratch/work/public/singularity/ubuntu-20.04.1.sif
 OVERLAY_FILE=/scratch/work/public/examples/greene-getting-started/overlay-15GB-500K-pytorch.ext3
 singularity exec --nv --overlay $OVERLAY_FILE $SINGULARITY_IMAGE /bin/bash
+
+conda
 pip install git+https://github.com/openai/whisper.git 
 
 ## Transcript

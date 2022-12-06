@@ -6,7 +6,7 @@ SPEAKERS=$3
 
 source /ext3/miniconda3/bin/activate
 
-conda activate /scratch/xao1/nemo
+conda activate /scratch/xao1/asr/nemo
 
 mkdir $DIR
 

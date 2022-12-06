@@ -20,4 +20,4 @@ sbatch WhisperTranscript.s /scratch/xao1/UMichHealth/HCAJ18/HCAJ18_1.mp4 /scratc
 sbatch WhisperTranscript.s /scratch/xao1/UMichHealth/HCAJ18/HCAJ18_2.mp4 /scratch/xao1/UMichHealth/HCAJ18/transcript_2/
 
 ## Transcript Nemo
-sbatch createTranscript.s /scratch/xao1/UMichHealth/KEMK18/KEMK18_1.mp4 /scratch/xao1/UMichHealth/KEMK_18_1 4
+sbatch NemoTranscript.s /scratch/xao1/UMichHealth/KEMK18/KEMK18_1.mp4 /scratch/xao1/UMichHealth/KEMK_18_1 4

@@ -5,7 +5,7 @@ DIR=$2
 
 source /ext3/miniconda3/bin/activate
 
-conda activate /scratch/xao1/asr/whisper
+conda activate /scratch/xao1/whisper
 
 mkdir $DIR
 

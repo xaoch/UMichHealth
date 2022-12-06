@@ -8,7 +8,7 @@
 #SBATCH --job-name=poseExtraction
 #SBATCH --mail-type=END
 #SBATCH --mail-user=xavier.ochoa@nyu.edu
-#SBATCH --output=slurm_poseExtraction%j.out
+#SBATCH --output=slurm_postureExtraction%j.out
 
 
 OUTFILE=$2

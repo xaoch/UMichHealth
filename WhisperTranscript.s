@@ -8,7 +8,7 @@
 #SBATCH --job-name=createTranscript
 #SBATCH --mail-type=END
 #SBATCH --mail-user=xavier.ochoa@nyu.edu
-#SBATCH --output=slurm_createTranscript%j.out
+#SBATCH --output=slurm_whisperTranscript%j.out
 
 
 OUTDIR=$2

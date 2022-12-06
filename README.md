@@ -14,4 +14,10 @@ singularity exec --nv --overlay $OVERLAY_FILE $SINGULARITY_IMAGE /bin/bash
 pip install git+https://github.com/openai/whisper.git 
 
 ## Transcript
-sbatch WhisperTransript.s /scratch/xao1/UMichHealth/KEMK18/KEMK18_1.mp4 /scratch/xao1/UMichHealth/KEMK18/transcript_1/
+sbatch WhisperTranscript.s /scratch/xao1/UMichHealth/KEMK18/KEMK18_1.mp4 /scratch/xao1/UMichHealth/KEMK18/transcript_1/
+sbatch WhisperTranscript.s /scratch/xao1/UMichHealth/KEMK18/KEMK18_2.mp4 /scratch/xao1/UMichHealth/KEMK18/transcript_2/
+sbatch WhisperTranscript.s /scratch/xao1/UMichHealth/HCAJ18/HCAJ18_1.mp4 /scratch/xao1/UMichHealth/HCAJ18/transcript_1/
+sbatch WhisperTranscript.s /scratch/xao1/UMichHealth/HCAJ18/HCAJ18_2.mp4 /scratch/xao1/UMichHealth/HCAJ18/transcript_2/
+
+## Transcript Nemo
+sbatch createTranscript.s /scratch/xao1/UMichHealth/KEMK18/KEMK18_1.mp4 /scratch/xao1/UMichHealth/KEMK_18_1 4

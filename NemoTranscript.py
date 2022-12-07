@@ -20,7 +20,7 @@ def extract(inputfile, outputdirectory, speakers):
     print("Audio File: ",AUDIO_FILENAME)
     signal, sample_rate = librosa.load(AUDIO_FILENAME, sr=None)
 
-    CONFIG = "/scratch/xao1/asr/offline_diarization_with_asr.yaml"
+    CONFIG = "/scratch/xao1/asr/diar_infer_meeting.yaml"
     cfg = OmegaConf.load(CONFIG)
 
     meta = {

@@ -1,31 +1,22 @@
 import nemo.collections.asr as nemo_asr
 import numpy as np
 import librosa
-import wget
-import nemo
-import glob
 import os
 from omegaconf import OmegaConf
-import shutil
-import json
-from nemo.collections.asr.parts.utils.decoder_timestamps_utils import ASR_TIMESTAMPS
-from nemo.collections.asr.parts.utils.diarization_utils import ASR_DIAR_OFFLINE
-import gzip
-import sys
-import getopt
-import importlib
-import nemo.collections.asr.parts.utils.decoder_timestamps_utils as decoder_timestamps_utils
-importlib.reload(decoder_timestamps_utils)
-import nemo.collections.asr.parts.utils.diarization_utils as diarization_utils
-importlib.reload(diarization_utils)
+
 
 def extract(inputfile, outputdirectory, speakers):
+
     data_dir=outputdirectory
+    os.makedirs(data_dir, exist_ok=True)
+
     AUDIO_FILENAME = inputfile
     print("Audio File: ",AUDIO_FILENAME)
     signal, sample_rate = librosa.load(AUDIO_FILENAME, sr=None)
+
     CONFIG = "/home/xavier/UMichHealth/Data/offline_diarization_with_asr.yaml"
     cfg = OmegaConf.load(CONFIG)
+
     meta = {
         'audio_filepath': AUDIO_FILENAME,
         'offset': 0,

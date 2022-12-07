@@ -56,7 +56,7 @@ def extract(inputfile, outputdirectory, speakers):
     cfg.diarizer.asr.parameters.threshold=100 # ASR based VAD threshold: If 100, all silences under 1 sec are ignored.
     cfg.diarizer.asr.parameters.decoder_delay_in_sec=0.2 # Decoder delay is compensated for 0.2 sec
 
-    arpa_model_path = os.path.join('/scratch/xao1/asr/4gram_big.arpa')
+    arpa_model_path = os.path.join('/home/xavier/UMichHealth/4gram_big.arpa')
     cfg.diarizer.asr.ctc_decoder_parameters.pretrained_language_model = arpa_model_path
 
     asr_ts_decoder = ASR_TIMESTAMPS(**cfg.diarizer)

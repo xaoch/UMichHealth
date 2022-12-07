@@ -24,7 +24,7 @@ def extract(inputfile, outputdirectory, speakers):
     AUDIO_FILENAME = inputfile
     print("Audio File: ",AUDIO_FILENAME)
     signal, sample_rate = librosa.load(AUDIO_FILENAME, sr=None)
-    CONFIG = "/home/xavier/UMichHealth/offline_diarization_with_asr.yaml"
+    CONFIG = "/home/xavier/UMichHealth/Data/offline_diarization_with_asr.yaml"
     cfg = OmegaConf.load(CONFIG)
     meta = {
         'audio_filepath': AUDIO_FILENAME,
@@ -56,7 +56,7 @@ def extract(inputfile, outputdirectory, speakers):
     cfg.diarizer.asr.parameters.threshold=100 # ASR based VAD threshold: If 100, all silences under 1 sec are ignored.
     cfg.diarizer.asr.parameters.decoder_delay_in_sec=0.2 # Decoder delay is compensated for 0.2 sec
 
-    arpa_model_path = os.path.join('/home/xavier/UMichHealth/4gram_big.arpa')
+    arpa_model_path = os.path.join('/home/xavier/UMichHealth/Data/4gram_big.arpa')
     cfg.diarizer.asr.ctc_decoder_parameters.pretrained_language_model = arpa_model_path
 
     asr_ts_decoder = ASR_TIMESTAMPS(**cfg.diarizer)

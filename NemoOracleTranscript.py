@@ -58,7 +58,7 @@ def main(argv):
    outputfile = ''
    speakers=5
    try:
-      opts, args = getopt.getopt(argv,"hi:o:s:",["ifile=","ofile=","speakers="])
+      opts, args = getopt.getopt(argv,"hi:o:r:s:",["ifile=","ofile=","rttm=","speakers="])
    except getopt.GetoptError:
       print('test.py -i <inputfile> -o <outputfile> -s <speakers>')
       sys.exit(2)
@@ -71,7 +71,7 @@ def main(argv):
       elif opt in ("-o", "--ofile"):
          outputfile = arg
       elif opt in ("-r", "--rttm"):
-         rttmFile = arg
+         rttmfile = arg
       elif opt in ("-s", "--speakers"):
          speakers = arg
    print("Arguments: ",inputfile,outputfile,rttmfile,speakers)

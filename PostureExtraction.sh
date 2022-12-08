@@ -8,6 +8,8 @@ build/examples/openpose/openpose.bin \
     --video $1 \
     --write_json $3 \
     --write_video $2 \
-    --display 0
+    --display 0 \
+    --hand \
+    --face
 
 ffmpeg -y -i $2 "${2/%avi/mp4}"

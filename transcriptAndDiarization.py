@@ -31,6 +31,9 @@ embedding_model = PretrainedSpeakerEmbedding(
     "speechbrain/spkrec-ecapa-voxceleb",
     device=torch.device("cuda" if torch.cuda.is_available() else "cpu"))
 
+print("Using:")
+print("cuda" if torch.cuda.is_available() else "cpu")
+
 def convert_time(secs):
     return datetime.timedelta(seconds=round(secs))
 

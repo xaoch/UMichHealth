@@ -114,4 +114,5 @@ def speech_to_text(audio_file, selected_source_lang, whisper_model, num_speakers
     except Exception as e:
         raise RuntimeError("Error Running inference with local model", e)
 
-speech_to_text("/scratch/xao1/UMichHealth/KEMK18/KEMK18_1.wav", "en", "medium", 5)
+data=speech_to_text("/scratch/xao1/UMichHealth/KEMK18/KEMK18_1.wav", "en", "medium", 5)
+data.to_csv("transcriptKEMK18_1.csv")

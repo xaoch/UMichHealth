@@ -11,9 +11,8 @@ audio = spacer.append(audio, crossfade=0)
 
 audio.export('audio.wav', format='wav')
 
-
-
-pipeline = Pipeline.from_pretrained('pyannote/speaker-diarization', use_auth_token=True)
+pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization@2.1",
+                                    use_auth_token="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")
 
 DEMO_FILE = {'uri': 'blabla', 'audio': 'audio.wav'}
 dz = pipeline(DEMO_FILE)

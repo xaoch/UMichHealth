@@ -10,7 +10,7 @@ import os
 import numpy as np
 from sklearn.cluster import AgglomerativeClustering
 
-from pytube import YouTube
+
 import torch
 import pyannote.audio
 from pyannote.audio.pipelines.speaker_verification import PretrainedSpeakerEmbedding

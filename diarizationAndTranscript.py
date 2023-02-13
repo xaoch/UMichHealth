@@ -13,7 +13,7 @@ audio.export('audio.wav', format='wav')
 
 
 
-pipeline = Pipeline.from_pretrained('pyannote/speaker-diarization', use_auth_token=True)
+pipeline = Pipeline.from_pretrained('pyannote/speaker-diarization', use_auth_token=False)
 DEMO_FILE = {'uri': 'blabla', 'audio': 'audio.wav'}
 dz = pipeline(DEMO_FILE)
 with open("diarization.txt", "w") as text_file:
